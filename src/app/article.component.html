@@ -1,0 +1,21 @@
+<main>
+<div class="form" >
+<h3>GMBS RBAR</h3>
+	<input placeholder="uesrname" #userName (keyup)="onKeyuser(userName.value)">
+	<input type="password" placeholder="password" #password (keyup)="onKeypass(password.value)">
+	<button (click)="login(userName.value,password.value)">Login</button>
+	   <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="showNav" class="nav">
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <div class="container">
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="home">Entity/Invoice Accounts</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="about">Billing Line</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="courses">Billing Cycle</a></li>
+        </ul>
+    </div>
+</nav>
+</div>
+</main>
